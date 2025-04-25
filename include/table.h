@@ -132,7 +132,7 @@ public:
 		std::sort(data.begin(), data.end(), [](const auto& a, const auto& b) { return a.first < b.first; });
 	}
 
-	OrderedTable(const OrderedTable& t) : TableByArray<T, CellType>(), sz(t.sz), data(t.data) {}
+	OrderedTable(const OrderedTable& t) : TableByArray<T, CellType>(t) {}
 
 	bool insert(size_t key, const T& val) override
 	{
